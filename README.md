@@ -3,7 +3,6 @@
 
 Version 1.07
 Released on August 14, 2025
-Docs updated on August 20, 2025
 
 Copyright (c) 2025 Francesco Gramignani "Graham"
 https://graham-it.itch.io/dirbrowser
