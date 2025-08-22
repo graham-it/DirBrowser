@@ -1,0 +1,80 @@
+;db128.def - Dir Browser user configuration
+
+;Commodore machine target system
+target = 128		;20  = VIC-20
+			;64  = C64
+			;128 = C128
+			;264 = 264 Series (C16, Plus/4, etc.)
+
+;Program options (0 = disabled, 1 = enabled)
+aboutenable	= 1	;include program info message
+addressmode	= 1	;BASIC relocated load address (by holding down SHIFT key)
+autodetect	= 1	;auto detect active devices
+cachemem	= 1	;store previous directories into memory (including cursor position and sort mode)
+colorenable	= 1	;enable color output
+colorline	= 1	;change color to highlight selected entry (colorenable required, rasterbar disabled)
+counterenable	= 1	;calculate and display entries number (getdiskinfo required)
+devchange	= 1	;enable device change function
+fastsort	= 1	;optimized sort routine (sortenable required)
+getdiskid	= 1	;get/display disk id (getdiskinfo required)
+getdiskinfo	= 1	;get/display disk info (name and optionally id and entries number)
+joyenable	= 1	;enable joystick input
+printbars	= 1	;display bars at top/bottom of list
+printbuttons	= 1	;display active buttons
+rasterbar	= 0	;highlight selected entry with raster bar instead of reversed line
+rememberpos	= 1	;remember cursor position on previous directories
+rightalign	= 1	;right align numbers
+rootentry	= 1	;include root dir entry into list
+rootonstart	= 0	;root dir at program start and after every device change
+searchenable	= 1	;enable search entry by its first char
+sortenable	= 1	;enable sort list by name
+statusenable	= 1	;enable waiting message
+tapesupport	= 1	;mount TAP images through "XT:" command (ITS module required)
+
+;Machine specific (0 = disabled, 1 = enabled)
+getsize		= 1	;get/display file size
+wholeline	= 1	;reverse whole screen line to highlight selected entry
+romscroll	= 0	;use Kernal ROM routines to scroll list (slower)
+
+;Default values
+def_device = 0		;default device number (0 = last used)
+def_aboutmode = 1	;display program info at start-up (0 = disabled, 1 = enabled)
+def_cachemode = 1	;cache mode (0 = disabled, 1 = enabled)
+def_sortmode = 0	;sort mode (0 = disabled, 1 = enabled)
+def_joyport = 2		;default joystick port (1 or 2)
+
+list_tab = 2		;list columns spacing
+
+!if colorenable {
+;System color codes
+;code	VIC-II 		VDC		RGBI		monochrome
+; 0	black		black		0000 = $00	black
+; 1	white		white		1111 = $0f	white
+; 2	red		dk_red		1000 = $08	gray
+; 3	cyan		lt_cyan		0111 = $07	white
+; 4	purple		lt_purple	1011 = $0b	white
+; 5	green		dk_green	0100 = $04	gray
+; 6	blue		dk_blue		0010 = $02	gray
+; 7	yellow		lt_yellow	1101 = $0d	white
+; 8	orange		dk_purple	1010 = $0a	gray
+; 9	brown		dk_yellow	1100 = $0c	gray
+;10	lt_red		lt_red		1001 = $09	white
+;11	dk_gray		dk_cyan		0110 = $06	gray
+;12	gray		gray		0001 = $01	black
+;13	lt_green	lt_green	0101 = $05	white
+;14	lt_blue		lt_blue		0011 = $03	white
+;15	lt_gray		lt_gray		1110 = $0e	gray
+
+about_col	= 7	;yellow
+active_col	= 2	;red
+back_col	= 0	;black
+bar_col		= 11	;dk_gray
+border_col	= 11	;dk_gray (VIC-II only)
+button_col	= 1	;white
+diskinfo_col	= 1	;white
+list_col	= 1	;white
+raster_col	= 8	;orange (VIC-II only)
+select_col	= 13	;lt_green (VIC-II only)
+status_col	= 7	;yellow
+sel80_col	= 3	;lt_cyan (VDC only)
+}

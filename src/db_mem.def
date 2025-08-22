@@ -1,0 +1,218 @@
+;Dir Browser
+;memory allocation
+
+;version 1.07
+;released on 14/8/2025
+
+;Copyright (c) 2025 Francesco Gramignani "Graham"
+;https://graham-it.itch.io/dirbrowser
+
+; --------------------
+; - Zero Page 
+; --------------------
+
+!if target = 20 | target = 64 {
+!if cachemem {
+tblbas = $1c		;pointer to current table
+cachemode = $2a		;cache mode (bit 7)
+
+} else {
+!if rememberpos {
+prevpos = $1c		;pointer to previous position
+prevrow = $2a		;previous cursor row
+}
+}
+
+selected = $1e		;pointer to selected entry
+currow = $20		;cursor row
+
+!if sortenable {
+sortmode = $21		;sort mode flag (bit 7)
+}
+
+insideimage = $26	;disk/tape image flag
+			;bit 7 = inside disk image (except for DNP native partition)
+			; "  6 = TAP file selected
+
+dosnamelen = $27	;length of file name
+tmp = $28		;temp value
+
+!if addressmode {
+loadmode = $29		;load address mode
+}
+
+!if joyenable {
+joydelay = $57		;joystick repeat delay counter
+lastjoy = $58		;last joystick input
+
+!if target = 64 {
+joyport = $59		;joystick port (0 = port #2, 1 = port #1)
+}
+}
+
+!if target = 20 {
+!if vicmemcfg = 8 {
+!if cartsupport {
+cartmode = $59		;cartridge image (bit 7) autostart (bit 6)
+}
+}
+}
+
+!if rasterbar {
+startraster = $5a	;start rasterline
+}
+
+!if aboutenable {
+aboutmode = $5b		;about message flag (bit 7)
+}
+
+!if target = 64 {
+!if fastload {
+turbomode = $5c		;fast load flag (bit 7 = enabled, bit 6 = not detected)
+}
+}
+
+tbllst = $5f		;pointer to last entry
+}
+;target = 20 | target = 64
+
+!if target = 20 | target = 64 | target = 128 {
+tmpptr = $fb		;temp pointer
+auxptr = $fd		;aux pointer
+}
+;target = 20 | target = 64 | target = 128
+
+!if target = 128 {
+!if cachemem {
+tblbas = $1e		;pointer to current table
+cachemode = $2c		;cache mode (bit 7)
+
+} else {
+!if rememberpos {
+prevpos = $1e		;previous dir position
+prevrow = $2c		;previous cursor row
+}
+}
+
+selected = $20		;pointer to selected entry
+currow = $22		;cursor row
+
+!if sortenable {
+sortmode = $23		;sort mode flag (bit 7)
+}
+
+insideimage = $28	;disk/tape image flag
+			;bit 7 = inside disk image (except for DNP native partition)
+			; "  6 = TAP file selected
+
+dosnamelen = $29	;length of file name
+tmp = $2a		;temp value
+
+!if addressmode {
+loadmode = $2b		;load address mode
+}
+
+tbllst = $50		;pointer to last entry
+
+!if joyenable {
+joydelay = $59		;joystick repeat delay counter
+lastjoy = $5a		;last joystick input
+joyport = $5b		;joystick port (0 = port #2, 1 = port #1)
+}
+
+!if rasterbar {
+startraster = $5c	;start rasterline
+}
+
+!if aboutenable {
+aboutmode = $5d		;about message flag (bit 7)
+}
+}
+;target = 128
+
+!if target = 264 {
+!if cachemem {
+tblbas = $d0		;pointer to current table
+cachemode = $d9		;cache mode (bit 7)
+
+} else {
+!if rememberpos {
+prevpos = $d0		;previous dir position
+prevrow = $d9		;previous cursor row
+}
+}
+
+selected = $d2		;pointer to selected entry
+currow = $d4		;cursor row
+
+!if sortenable {
+sortmode = $d5		;sort mode flag (bit 7)
+}
+
+insideimage = $d6	;disk/tape image flag
+			;bit 7 = inside disk image (except for DNP native partition)
+			; "  6 = TAP file selected
+
+dosnamelen = $d7	;length of file name
+tmp = $d8		;temp value
+
+!if joyenable {
+joydelay = $da		;joystick repeat delay counter
+lastjoy = $db		;last joystick input
+joyport = $dc		;joystick port (0 = port #1, 1 = port #2)
+}
+
+!if addressmode {
+loadmode = $dd		;load address mode
+}
+
+!if rasterbar {
+startraster = $de	;start rasterline
+}
+
+!if aboutenable {
+aboutmode = $df		;about message flag (bit 7)
+}
+
+tbllst = $e0		;pointer to last entry
+tmpptr = $e2		;temp pointer
+auxptr = $e4		;aux pointer
+}
+;target = 264
+
+; --------------------
+; - Miscellaneous
+; --------------------
+
+doscmd = BASBUF			;DOS command address
+dosname = doscmd+cmdlen		;file name address
+
+!if sortenable {
+!if fastsort {
+;Optimized sort pointers
+lastsort = PNT			;last entry to sort
+lastswap = USER			;position of last swap
+}
+}
+
+!if target = 20 {
+!if vicmemcfg {
+RAMBOT_3K	= $400		;Start of user RAM (+3k)
+RAMBOT_8K	= $1200		;Start of user RAM (+8k)
+RAMBOT_UNEXP	= $1000		;Start of user RAM (unexpanded)
+RAMTOP_UNEXP	= $1e00		;End of user RAM (+3k or unexpanded)
+}
+}
+
+!if target = 128 {
+;Custom memory config
+mmu_cfg = 14		;RAM from block 0 instead of BASIC ROMs & Monitor ($4000-$bfff)
+}
+
+!if target = 264 {
+fnkeynum = 8		;number of function keys (F1..F7, HELP)
+
+!if fnkeysave {
+fnkeystore = $fe8	;function key definitions storage (16 bytes)
+}
+}

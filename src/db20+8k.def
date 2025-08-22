@@ -1,0 +1,73 @@
+;Dir Browser
+;user configuration
+
+;Commodore machine target system
+target = 20		;20  = VIC-20
+			;64  = C64
+			;128 = C128
+			;264 = 264 Series (C16, Plus/4, etc.)
+
+;VIC-20 memory configuration
+vicmemcfg = 8		;0 = unexpanded
+			;3 = +3k RAM
+			;8 = +8k RAM (or more)
+
+;Program options (0 = disabled, 1 = enabled)
+aboutenable	= 1	;include program info message
+addressmode	= 1	;BASIC relocated load address (by holding down SHIFT key)
+autodetect	= 1	;auto detect active devices
+cachemem	= 1	;store previous directories into memory (including cursor position and sort mode)
+colorenable	= 1	;enable color output
+colorline	= 1	;change color to highlight selected entry (colorenable required, rasterbar disabled)
+counterenable	= 1	;calculate and display entries number (getdiskinfo required)
+devchange	= 1	;enable device change function
+fastsort	= 1	;optimized sort routine (sortenable required)
+getdiskid	= 0	;get/display disk id (getdiskinfo required)
+getdiskinfo	= 1	;get/display disk info (name and optionally id and entries number)
+joyenable	= 1	;enable joystick input
+printbars	= 1	;display bars at top/bottom of list
+printbuttons	= 1	;display active buttons
+rasterbar	= 0	;highlight selected entry with raster bar instead of reversed line
+rememberpos	= 1	;remember cursor position on previous directories
+rightalign	= 1	;right align numbers
+rootentry	= 1	;include root dir entry into list
+rootonstart	= 0	;root dir at program start and after every device change
+searchenable	= 1	;enable search entry by its first char
+sortenable	= 1	;enable sort list by name
+statusenable	= 1	;enable waiting message
+tapesupport	= 1	;mount TAP images through "XT:" command (ITS module required)
+
+!if vicmemcfg = 8 {
+cartsupport	= 1	;support for autostart and multipart (16k) cartridge images
+}
+
+;Default values
+def_device = 0		;default device number (0 = last used)
+def_aboutmode = 1	;display program info at start-up (0 = disabled, 1 = enabled)
+def_cachemode = 1	;cache mode (0 = disabled, 1 = enabled)
+def_sortmode = 0	;sort mode (0 = disabled, 1 = enabled)
+
+list_tab = 1		;list columns spacing
+
+!if colorenable {
+;System color codes
+; 0 = black	 1 = white	 2 = red	 3 = cyan
+; 4 = purple	 5 = green	 6 = blue	 7 = yellow
+; 8 = orange	 9 = lt_orange	10 = pink	11 = lt_cyan
+;12 = lt_purple	13 = lt_green	14 = lt_blue	15 = lt_yellow
+
+;Foreground and border (0..7)
+about_col	= 7	;yellow
+active_col	= 2	;red
+bar_col		= 5	;green
+border_col	= 6	;blue
+button_col	= 1	;white
+diskinfo_col	= 1	;white
+list_col	= 1	;white
+select_col	= 3	;cyan
+status_col	= 7	;yellow
+
+;Background (0..15)
+back_col	= 0	;black
+raster_col	= 14	;lt_blue
+}
