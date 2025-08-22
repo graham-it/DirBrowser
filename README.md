@@ -66,7 +66,7 @@ Installation
 =============
 
 After downloading the program archive from the provided URL, you need to
-extract the files in the "exec" folder and copy them to the root folder
+extract the files in the "bin" folder and copy them to the root folder
 of the media where you want to use the program.
 If desired, you can copy only the executable files for
 the machines you need:
