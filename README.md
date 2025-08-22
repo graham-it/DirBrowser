@@ -1,33 +1,31 @@
 # DirBrowser
 ...a lightweight and versatile program launcher for Commodore 8-bit machines!
 
-Version 1.07
+Version 1.07\
 Released on August 14, 2025
 
-Copyright (c) 2025 Francesco Gramignani "Graham"
+Copyright (c) 2025 Francesco Gramignani "Graham"\
 https://graham-it.itch.io/dirbrowser
 
 
-Description
-===========
+## Description
 
 Dir Browser is a lightweight and versatile program launcher for Commodore
 8-bit machines that allows you to explore the contents of one or more
-connected disk drives.
+connected disk drives.\
 Through this utility you can change the current directory, mount disk images
-(or tape), and launch programs easily and intuitively.
+(or tape), and launch programs easily and intuitively.\
 Designed to be used in conjunction with SD2IEC devices, it also supports
 common Commodore disk drives (or compatible).
 
 
-Compatibility
-=============
+## Compatibility
 
 Dir Browser is available for the following Commodore machines:
-- C64		with "Fast Load" support
-- VIC-20	with or without memory expansion
-- C128		40 and 80 column mode support
-- 264 Series	(C16, Plus/4, and other TED machines)
+- C64			with "Fast Load" support
+- VIC-20		with or without memory expansion
+- C128			40 and 80 column mode support
+- 264 Series    (C16, Plus/4, and other TED machines)
 
 Tested disk drives:
 - SD2IEC
@@ -46,8 +44,7 @@ Supported image files:
 - .tap		tape image (ITS module required)
 
 
-Features
-========
+## Features
 
 - Automatically detects connected devices
 - Cache memory to speed-up directory browsing
@@ -62,24 +59,23 @@ Features
 - File extension recognition to auto-mount disk and tape images
 
 
-Installation
-=============
+## Installation
 
 After downloading the program archive from the provided URL, you need to
 extract the files in the "bin" folder and copy them to the root folder
-of the media where you want to use the program.
+of the media where you want to use the program.\
 If desired, you can copy only the executable files for
-the machines you need:
+the machines you need:\
 
-File name	Compatible machine
-==========	======================================================
-boot		C64 (optional)
-db64		 "  (main program)
-db20		VIC-20 (without memory expansion)
-db20+3k		 "     (with 3 KB memory expansion)
-db20+8k		 "     (with 8 KB or more memory expansion)
-db128		C128 (executable from both 40 and 80 columns)
-db264		264 Series (C16, Plus/4, and other TED machines)
+File name	Compatible machine<br/>
+==========	======================================================\
+- boot		C64 (optional)
+- db64		 "  (main program)
+- db20		VIC-20 (without memory expansion)
+- db20+3k		 "     (with 3 KB memory expansion)
+- db20+8k		 "     (with 8 KB or more memory expansion)
+- db128		C128 (executable from both 40 and 80 columns)
+- db264		264 Series (C16, Plus/4, and other TED machines)
 
 The "boot" file is optional and (for now) is only available for the C64.
 It is a self-executing file (it starts without RUN) that installs the
@@ -90,25 +86,24 @@ appropriate menu button.
 Note:
 With "Turbo" installed, you cannot reload Dir Browser via the "boot" file
 (for example, at the end of a BASIC program). You must reload it directly
-via the main "fb64" file.
+via the main "fb64" file.\
 Another method is to press RUN/STOP+RESTORE to deactivate the "Fast Load"
-routine, then relaunch Dir Browser from "boot".
+routine, then relaunch Dir Browser from "boot".\
 This is because the "Fast Load" routine is not compatible with self-executing
 files, such as those found in various versions of GEOS (and in some games such
 as GP Circuit, Hot Wheels, and Test Drive 2).
 
 
-Tips
-====
+## Tips
 
 To reduce the number of keys to press, to load Dir Browser after machine cold
 start, I recommend you copying the version of the program appropriate for the
 machine you use most often as the first file in the main folder (the order of
-the folders is irrelevant).
+the folders is irrelevant).\
 If you want to use the "Turbo" version for the C64, the first file should
-be "boot".
+be "boot".\
 This will make it easier to launch Dir Browser by entering the following
-command from BASIC: LOAD"*",8,1
+command from BASIC: LOAD"*",8,1\
 Furthermore, I recommend you organizing your programs in separate folders,
 possibly by machine type.
 
@@ -116,16 +111,15 @@ Note:
 The SD2IEC interface, while supporting long file names (since it is based on
 FAT32 file system), connected to a Commodore machine, has the limitation of
 showing file names limited to 16 characters (including any extensions of disk
-images).
+images).\
 Therefore, it is recommended to rename program files with names longer than
-the standard length.
+the standard length.\
 To improve compatibility, especially with "multi-load" programs (split into
 multiple files), it is recommended to remove the ".prg" extension from file
 names, as it is implicit.
 
 
-Control keys
-============
+## Control keys
 
 Keys active on all machines:
 CRSR/JOY UP		Previous file
@@ -151,8 +145,7 @@ ESC			Return to BASIC
 HELP			Display program information
 
 
-Function keys
-==============
+## Function keys
 
 Except for VIC-20 version without memory expansion, active function keys
 are visible at the bottom of the screen.
@@ -186,8 +179,7 @@ F6	QUIT		Returns to BASIC
 F7	RESET		Reset the machine
 
 
-Fast Load (C64 only)
-====================
+## Fast Load (C64 only)
 
 The C64 version of Dir Browser can be used in conjunction with "Fast Load"
 program by Thomas Tempelmann.
@@ -216,8 +208,7 @@ Furthermore, a "raster bar" effect will be visible during loading, instead
 of the classic blank screen.
 
 
-Optional modules
-================
+## Optional modules
 
 Dir Browser can be recompiled with the following modules enabled or disabled:
 aboutenable	Includes program information
@@ -258,49 +249,42 @@ configuration files for each individual machine, identified by the
 "def" extension.
 
 
-Specific Options
-================
+## Specific Options
 
-VIC-20 (8k+ version only):
-cartsupport	Allows to recognize and run cartridge images
-		(even if split into multiple parts)
+VIC-20 (8k+ version only):\
+cartsupport	Allows to recognize and run cartridge images (even if split into multiple parts)
 
-C64:
-fastload	Detects the presence of Fast Load and allows you to disable it
-kernalold	Fixes some color management bugs with older Kernal versions
-		(rev. 1 or 2)
+C64:<br/>
+fastload	Detects the presence of Fast Load and allows you to disable it\
+kernalold	Fixes some color management bugs with older Kernal versions	(rev. 1 or 2)
 
-C64, C128 and 264 Series:
-getsize		Displays file size
-wholeline	Highlights the entire line of the screen corresponding
-		to the selected item
+C64, C128 and 264 Series:\
+getsize		Displays file size\
+wholeline	Highlights the entire line of the screen corresponding to the selected item
 
-C128 and 264 Series:
-romscroll	Uses the routines built into the Kernal ROM to scroll the list
-		on the screen
+C128 and 264 Series:\
+romscroll	Uses the routines built into the Kernal ROM to scroll the list on the screen
 
-264 Series:
-fnkeysave	Saves the function key definitions before starting the program
-		(recommended on Plus/4)
+264 Series:\
+fnkeysave	Saves the function key definitions before starting the program (recommended on Plus/4)
 
 
-Emulation on VICE
-=================
+## Emulation on VICE
+
 Files in the "vice" folder are compiled versions for debugging and should
-not be used on a real machine.
+not be used on a real machine.\
 Specifically, the "root" command is compatible with the "VICE Virtual FS",
 and the color of the frame changes during disk access to provide feedback
-to the user.
+to the user.\
 Of course, within VICE, it's not possible to mount disk (and tape) images
 directly from the program.
 
 
-Credits
-=======
+## Credits
 
 - nbla000
 author of CBM FileBrowser v1.6 (c) 2010-2013, that simplified the use of
-SD2IEC interface with Commodore machines.
+SD2IEC interface with Commodore machines.\
 The need to provide the program with new features pushed me to analyze
 the source code and create a completely new one, trying to maintain the
 appearance and small size typical of the original program.
@@ -308,7 +292,7 @@ appearance and small size typical of the original program.
 - Thomas Tempelmann
 author of Fast Load v1.1 (c) 1984, a program for the C64 that allows
 speeding up program loading from the 1541 disk drive, without any
-hardware modifications.
+hardware modifications.\
 It is currently one of the few "fast loaders" supported by the SD2IEC
 interface, and can be used in conjunction with Dir Browser, with the
 option of disabling it in cases where there are compatibility issues
@@ -320,8 +304,7 @@ Environments (c) 1998-2020, thath allowed me to make the development
 of this project faster and more efficient, working comfortably on a PC.
 
 
-Contributors
-============
+## Contributors
 
 - You Dev IT (Mille e Una Avventura)
   www.youdev.it
@@ -333,22 +316,21 @@ Contributors
   https://retrofixer.it
 
 
-Copyright
-=========
+## Copyright
 
-The program is released for public use according to legal practices.
+The program is released for public use according to legal practices.\
 It may be downloaded only from the indicated URL and may not be redistributed
 on other sites or installed on storage media for commercial purposes, without
-the author's express consent.
+the author's express consent.\
 The downloadable archive contains the executables, the source code, consisting
 of multiple files, and this description file, available in Italian and English
-language.
+language.\
 Any clarifications, modifications, or proposed changes to the source code can
 be submitted to the creator of the project through the provided communication
 channels.
 
-author:		Eng. Francesco Gramignani "Graham"
-email:		fra.gram@tin.it
+author:		Eng. Francesco Gramignani "Graham"\
+email:		fra.gram@tin.it\
 url:		https://graham-it.itch.io
 
 August 14, 2025 Palermo (Italy)
