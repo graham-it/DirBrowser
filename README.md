@@ -66,17 +66,17 @@ After downloading the program archive from the provided URL, you need to
 extract the files in the "bin" folder and copy them to the root folder
 of the media where you want to use the program.\
 If desired, you can copy only the executable files for
-the machines you need:\
+the machines you need:
 
-File name	Compatible machine<br/>
-==========	======================================================\
-- boot		C64 (optional)
-- db64		 "  (main program)
-- db20		VIC-20 (without memory expansion)
-- db20+3k		 "     (with 3 KB memory expansion)
-- db20+8k		 "     (with 8 KB or more memory expansion)
-- db128		C128 (executable from both 40 and 80 columns)
-- db264		264 Series (C16, Plus/4, and other TED machines)
+|File name|Compatible machine|
+|---------|------------------------------------------------|
+|boot     |C64 (turbo installer, optional)|
+|db64     |C64 (main program)|
+|db20     |VIC-20 (without memory expansion)|
+|db20+3k  |VIC-20 (with 3 KB memory expansion)|
+|db20+8k  |VIC-20 (with 8 KB, or more, memory expansion)|
+|db128    |C128 (executable from both 40 and 80 columns)|
+|db264    |264 Series (C16, Plus/4, and other TED machines)|
 
 The "boot" file is optional and (for now) is only available for the C64.
 It is a self-executing file (it starts without RUN) that installs the
