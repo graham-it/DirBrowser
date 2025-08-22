@@ -1,12 +1,13 @@
 # DirBrowser
 ...a lightweight and versatile program launcher for Commodore 8-bit machines!
 
+![](/pics/c64_example.png)
+
 Version 1.07\
 Released on August 14, 2025
 
 Copyright (c) 2025 Francesco Gramignani "Graham"\
 https://graham-it.itch.io/dirbrowser
-
 
 ## Description
 
