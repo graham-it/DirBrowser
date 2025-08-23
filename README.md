@@ -9,7 +9,8 @@ Released on August 14, 2025
 Version 1.07 (first release)\
 Released on August 14, 2025
 
-Copyright (c) 2025 Francesco Gramignani "Graham"\
+Copyright (c) 2025 Francesco Gramignani "Graham"
+
 https://graham-it.itch.io/dirbrowser \
 https://github.com/graham-it/DirBrowser
 
