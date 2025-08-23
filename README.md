@@ -1,7 +1,7 @@
 # DirBrowser
 ...a lightweight and versatile program launcher for Commodore 8-bit machines!
 
-![](/pics/c64_example.png)
+![](/pics/db64_nos.png)
 
 Version 1.08 (minor update)\
 Released on August 14, 2025
