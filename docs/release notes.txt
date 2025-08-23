@@ -1,0 +1,24 @@
+Dir Browser - Release notes
+===========================
+
+Version 1.08 (minor revision)
+Released on August 23, 2025
+
+- Fixed a bug with control code chars in entry names (like in
+  "H.E.R.O. is back+1D[HF+EX].d64").
+  Note: the same bug occurs in CBM FileBrowser;
+
+- "boot" file renamed "tdb64" for clarity (launches db64 with turbo installed);
+- created "db_deb.def" file to separate debug flags from source code;
+- "exec" folder renamed "bin";
+- release notes added in "dosc" folder.
+
+
+Version 1.07 (first release)
+Released on August 14, 2025
+
+originally published on:
+https://graham-it.itch.io/dirbrowser
+https://github.com/graham-it/DirBrowser
+
+Copyright (c) 2025 Graham
