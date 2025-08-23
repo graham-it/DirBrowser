@@ -3,11 +3,16 @@
 
 ![](/pics/c64_example.png)
 
-Version 1.07\
+Version 1.08 (minor update)\
+Released on August 14, 2025
+
+Version 1.07 (first release)\
 Released on August 14, 2025
 
 Copyright (c) 2025 Francesco Gramignani "Graham"\
-https://graham-it.itch.io/dirbrowser
+https://graham-it.itch.io/dirbrowser \
+https://github.com/graham-it/DirBrowser
+
 
 ## Description
 
@@ -70,7 +75,7 @@ the machines you need:
 
 |File name|Compatible machine|
 |---------|------------------------------------------------|
-|boot     |C64 (turbo installer, optional)|
+|tdb64    |C64 (turbo installer, optional)|
 |db64     |C64 (main program)|
 |db20     |VIC-20 (without memory expansion)|
 |db20+3k  |VIC-20 (with 3 KB memory expansion)|
@@ -78,18 +83,18 @@ the machines you need:
 |db128    |C128 (executable from both 40 and 80 columns)|
 |db264    |264 Series (C16, Plus/4, and other TED machines)|
 
-The "boot" file is optional and (for now) is only available for the C64.
+The "tdb64" file is optional and (for now) is only available for the C64.
 It is a self-executing file (it starts without RUN) that installs the
 "Fast Load" routine and then loads the main "fb64" program with the "Turbo"
 option enabled (by default), which can be disabled by the user using the
 appropriate menu button.
 
 Note:
-With "Turbo" installed, you cannot reload Dir Browser via the "boot" file
+With "Turbo" installed, you cannot reload Dir Browser via the "tdb64" file
 (for example, at the end of a BASIC program). You must reload it directly
 via the main "fb64" file.\
 Another method is to press RUN/STOP+RESTORE to deactivate the "Fast Load"
-routine, then relaunch Dir Browser from "boot".\
+routine, then relaunch Dir Browser from "tdb64".\
 This is because the "Fast Load" routine is not compatible with self-executing
 files, such as those found in various versions of GEOS (and in some games such
 as GP Circuit, Hot Wheels, and Test Drive 2).
@@ -102,7 +107,7 @@ start, I recommend you copying the version of the program appropriate for the
 machine you use most often as the first file in the main folder (the order of
 the folders is irrelevant).\
 If you want to use the "Turbo" version for the C64, the first file should
-be "boot".\
+be "tdb64".\
 This will make it easier to launch Dir Browser by entering the following
 command from BASIC: LOAD"*",8,1\
 Furthermore, I recommend you organizing your programs in separate folders,
@@ -196,12 +201,12 @@ can be disabled using the appropriate button.
    will be installed in memory, then manually loading and running
    Dir Browser;
 
-2) by launching the self-executable program "boot," which must be located
-   in the same folder as Dir Browser, with the command: LOAD"BOOT",8,1
+2) by launching the self-executable program "tdb64", which must be located
+   in the same folder as Dir Browser, with the command: LOAD"TDB64",8,1
    This will automatically install "Fast Load" and launch Dir Browser.
 
 Note:
-The Fast Load routine included in the "boot" file is a modified (by me)
+The Fast Load routine included in the "tdb64" file is a modified (by me)
 version of Thomas Tempelmann's original program, which allows you to load
 programs even from devices with addresses other than 8, provided
 that any other drives are turned off or disconnected.
@@ -319,10 +324,11 @@ of this project faster and more efficient, working comfortably on a PC.
 
 ## Copyright
 
+
 The program is released for public use according to legal practices.\
-It may be downloaded only from the indicated URL and may not be redistributed
-on other sites or installed on storage media for commercial purposes, without
-the author's express consent.\
+It may be downloaded from the URLs indicated and may not be redistributed
+on other sites or installed on storage media for commercial purposes, unless
+with the express consent of the author.\
 The downloadable archive contains the executables, the source code, consisting
 of multiple files, and this description file, available in Italian and English
 language.\
@@ -332,6 +338,8 @@ channels.
 
 author:		Eng. Francesco Gramignani "Graham"\
 email:		fra.gram@tin.it\
-url:		https://graham-it.itch.io
+URLs:\
+https://graham-it.itch.io/dirbrowser \
+https://github.com/graham-it/DirBrowser
 
 August 14, 2025 Palermo (Italy)
