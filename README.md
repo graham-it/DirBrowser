@@ -12,7 +12,8 @@ Released on August 14, 2025
 Copyright (c) 2025 Francesco Gramignani "Graham"
 
 https://graham-it.itch.io/dirbrowser \
-https://github.com/graham-it/DirBrowser
+https://github.com/graham-it/DirBrowser \
+https://csdb.dk/release/?id=255620
 
 
 ## Description
@@ -97,8 +98,8 @@ via the main "fb64" file.\
 Another method is to press RUN/STOP+RESTORE to deactivate the "Fast Load"
 routine, then relaunch Dir Browser from "tdb64".\
 This is because the "Fast Load" routine is not compatible with self-executing
-files, such as those found in various versions of GEOS (and in some games such
-as GP Circuit, Hot Wheels, and Test Drive 2).
+files, such as those found in various versions of GEOS and in some games, such
+as GP Circuit, Hot Wheels, and Test Drive 2.
 
 
 ## Tips
@@ -128,28 +129,26 @@ names, as it is implicit.
 
 ## Control keys
 
-Keys active on all machines:
-CRSR/JOY UP		Previous file
-CRSR/JOY DOWN		Next file
-CRSR/JOY LEFT		Previous page (or first line of page)
-CRSR/JOY RIGHT		Next page (or last line of page)
-HOME			Top of list
-CLR (SHIFT+HOME)	Bottom of list
-DEL (backspace)		Previous directory (or unmount a disk image)
-INST (SHIFT+DEL)	Root of disk
-"$" (dollar sign)	Reloads current directory
-RUN/STOP		Stops loading from disk (or sorting of files)
-RETURN or JOY FIRE	Start a program (LOAD"file name",8,1)
-			open a directory, or mount a disk (or tape) image
-SHIFT+RETURN		Forces loading a program into the BASIC area
-			(LOAD"file name",8)
+### Keys active on all machines:
+- CRSR/JOY UP		Previous file
+- CRSR/JOY DOWN		Next file
+- CRSR/JOY LEFT		Previous page (or first line of page)
+- CRSR/JOY RIGHT		Next page (or last line of page)
+- HOME			Top of list
+- CLR (SHIFT+HOME)	Bottom of list
+- DEL (backspace)		Previous directory (or unmount a disk image)
+- INST (SHIFT+DEL)	Root of disk
+- "$" (dollar sign)	Reloads current directory
+- RUN/STOP		Stops loading from disk (or sorting of files)
+- RETURN or JOY FIRE	Start a program (LOAD"file name",8,1) open a directory, or mount a disk (or tape) image
+- SHIFT+RETURN		Forces loading a program into the BASIC area (LOAD"file name",8)
 
-VIC-20 and C64:
-"<-" (left arrow)	Return to BASIC
+### VIC-20 and C64:
+- "<-" (left arrow)	Return to BASIC
 
-C128 and 264 Series:
-ESC			Return to BASIC
-HELP			Display program information
+### C128 and 264 Series:
+- ESC			Return to BASIC
+- HELP			Display program information
 
 
 ## Function keys
@@ -157,33 +156,32 @@ HELP			Display program information
 Except for VIC-20 version without memory expansion, active function keys
 are visible at the bottom of the screen.
 
-VIC-20, C64, and C128:
-F1	DEV(nn)		Change device address (8..15)
-F2	CACHE		Cache memory for previous directories (on/off)
-F3(*)	RENEW(***)	Reload current directory
-F4(*)	JOY#(n)		Change joystick port (1/2)
-F5	SORT		Sort files in alphabetical order (on/off)
-F6(**)	QUIT		Return to BASIC
-F7	ABOUT		Display program information
-F8(**)	RESET		Reset the machine
+### VIC-20, C64, and C128:
+- F1	DEV(nn)		Change device address (8..15)
+- F2	CACHE		Cache memory for previous directories (on/off)
+- F3(*)	RENEW(***)	Reload current directory
+- F4(*)	JOY#(n)		Change joystick port (1/2)
+- F5	SORT		Sort files in alphabetical order (on/off)
+- F6(**)	QUIT		Return to BASIC
+- F7	ABOUT		Display program information
+- F8(**)	RESET		Reset the machine
 
 (*) actions not available in the VIC-20 version
 
 (**) To reduce program size, these are the only function keys active
 on the VIC-20 version without memory expansion.
 
-(***)
-C64 version with "fastload" module enabled:
-F5	TURBO		Fast Load (on/off)
+(***) C64 version with "fastload" module enabled:
+- F5	TURBO		Fast Load (on/off)
 
-264 Series:
-F1	DEV(nn)		Change device address (8..15)
-F2	RENEW		Reload current directory
-F3	SORT		Sort files in alphabetical order (on/off)
-F4	CACHE		Cache memory for previous directories (on/off)
-F5	JOY#(n)		Change joystick port (1/2)
-F6	QUIT		Returns to BASIC
-F7	RESET		Reset the machine
+### 264 Series:
+- F1	DEV(nn)		Change device address (8..15)
+- F2	RENEW		Reload current directory
+- F3	SORT		Sort files in alphabetical order (on/off)
+- F4	CACHE		Cache memory for previous directories (on/off)
+- F5	JOY#(n)		Change joystick port (1/2)
+- F6	QUIT		Returns to BASIC
+- F7	RESET		Reset the machine
 
 
 ## Fast Load (C64 only)
@@ -213,67 +211,6 @@ programs even from devices with addresses other than 8, provided
 that any other drives are turned off or disconnected.
 Furthermore, a "raster bar" effect will be visible during loading, instead
 of the classic blank screen.
-
-
-## Optional modules
-
-Dir Browser can be recompiled with the following modules enabled or disabled:
-aboutenable	Includes program information
-addressmode	Forces loading a program into the BASIC area (pressing
-		SHIFT+RETURN)
-autodetect	Automatically detects connected devices
-cachemem	Keeps previous directories in memory, speeding up browsing
-colorenable	Enables the color interface
-colorline	Uses a different color for the selected file ("colorenable"
-		required, "rasterbar" disabled)
-counterenable	Shows the number of files in the current directory
-		("getdiskinfo" required)
-devchange	Allows you to change the device cyclically (from address 8 to 15)
-fastsort	Uses an optimized version of the sorting algorithm
-		("sortenable" required)
-getdiskid	Shows the disk ID ("getdiskinfo" required)
-getdiskinfo	Shows disk information or the current directory (name, ID, and
-		number of files)
-joyenable	Enables the use of the joystick for navigation (via the
-		available ports)
-printbars	Prints separator bars above and below the list
-printbuttons	Displays user interface buttons
-rasterbar	Highlights the selected item with a "raster bar" (allows
-		multiple colors)
-rememberpos	Remembers the cursor position in previously visited folders
-rightalign	Right-aligns numeric values
-rootentry	Displays "root dir" entry in the list
-rootonstart	Starts at the root of the disk when the program starts and
-		every time device is changed
-searchenable	Searches for a file that begins with the pressed character
-sortenable	Enables file sorting using the "bubble sort" algorithm
-statusenable	Displays a wait message during loading (or when sorting files)
-tapesupport	Allows mounting of TAP images (ITS module required)
-
-Note:
-Compiling options are specified (with values of 0 or 1) within the
-configuration files for each individual machine, identified by the
-"def" extension.
-
-
-## Specific Options
-
-VIC-20 (8k+ version only):\
-cartsupport	Allows to recognize and run cartridge images (even if split into multiple parts)
-
-C64:<br/>
-fastload	Detects the presence of Fast Load and allows you to disable it\
-kernalold	Fixes some color management bugs with older Kernal versions	(rev. 1 or 2)
-
-C64, C128 and 264 Series:\
-getsize		Displays file size\
-wholeline	Highlights the entire line of the screen corresponding to the selected item
-
-C128 and 264 Series:\
-romscroll	Uses the routines built into the Kernal ROM to scroll the list on the screen
-
-264 Series:\
-fnkeysave	Saves the function key definitions before starting the program (recommended on Plus/4)
 
 
 ## Emulation on VICE
@@ -325,7 +262,6 @@ of this project faster and more efficient, working comfortably on a PC.
 
 ## Copyright
 
-
 The program is released for public use according to legal practices.\
 It may be downloaded from the URLs indicated and may not be redistributed
 on other sites or installed on storage media for commercial purposes, unless
@@ -341,6 +277,7 @@ author:		Eng. Francesco Gramignani "Graham"\
 email:		fra.gram@tin.it\
 URLs:\
 https://graham-it.itch.io/dirbrowser \
-https://github.com/graham-it/DirBrowser
+https://github.com/graham-it/DirBrowser \
+https://csdb.dk/release/?id=255620
 
 August 14, 2025 Palermo (Italy)
