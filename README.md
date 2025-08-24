@@ -4,7 +4,7 @@
 ![](/pics/db64_nos.png)
 
 Version 1.08 (minor update)\
-Released on August 14, 2025
+Released on August 23, 2025
 
 Version 1.07 (first release)\
 Released on August 14, 2025
