@@ -93,7 +93,7 @@ It is a self-executing file (it starts without RUN) that installs the
 option enabled (by default), which can be disabled by the user using the
 appropriate menu button.
 
-Note:
+Note:\
 With "Turbo" installed, you cannot reload Dir Browser via the "tdb64" file
 (for example, at the end of a BASIC program). You must reload it directly
 via the main "fb64" file.\
@@ -168,13 +168,13 @@ are visible at the bottom of the screen.
 - F7	ABOUT		Display program information
 - F8(**)	RESET		Reset the machine
 
-(*) actions not available in the VIC-20 version
+(*) not available on the VIC-20 version
 
 (**) To reduce program size, these are the only function keys active
 on the VIC-20 version without memory expansion.
 
 (***) C64 version with "fastload" module enabled:
-- F5	TURBO		Fast Load (on/off)
+- F3	TURBO		Fast Load (on/off)
 
 ### 264 Series:
 - F1	DEV(nn)		Change device address (8..15)
@@ -228,14 +228,14 @@ directly from the program.
 
 ## Credits
 
-- nbla000
+- nbla000\
 author of CBM FileBrowser v1.6 (c) 2010-2013, that simplified the use of
 SD2IEC interface with Commodore machines.\
 The need to provide the program with new features pushed me to analyze
 the source code and create a completely new one, trying to maintain the
 appearance and small size typical of the original program.
 
-- Thomas Tempelmann
+- Thomas Tempelmann\
 author of Fast Load v1.1 (c) 1984, a program for the C64 that allows
 speeding up program loading from the 1541 disk drive, without any
 hardware modifications.\
@@ -244,7 +244,7 @@ interface, and can be used in conjunction with Dir Browser, with the
 option of disabling it in cases where there are compatibility issues
 with specific software.
 
-- Marco Baye
+- Marco Baye\
 author of ACME 0.97 compiler, the ACME Crossassembler for Multiple
 Environments (c) 1998-2020, thath allowed me to make the development
 of this project faster and more efficient, working comfortably on a PC.
@@ -252,13 +252,13 @@ of this project faster and more efficient, working comfortably on a PC.
 
 ## Contributors
 
-- You Dev IT (Mille e Una Avventura)
+- You Dev IT (Mille e Una Avventura)\
   www.youdev.it
 
-- IGP Tech Blog
+- IGP Tech Blog\
   www.isaac-garcia-peveri.com
 
-- RetroFixer
+- RetroFixer\
   https://retrofixer.it
 
 
