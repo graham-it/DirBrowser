@@ -65,6 +65,8 @@ Supported image files:
 - Fast scrolling
 - On-screen active buttons
 - File extension recognition to auto-mount disk and tape images
+- On C64 (without any hardware mods): supports software based Fast Load, deactivable with "Turbo" button
+- On VIC-20 (with at least 8 KB of expansion): recognizes and auto-executes cartridge images (even splitted into multiple parts)
 
 
 ## Installation
@@ -81,7 +83,7 @@ the machines you need:
 |db64     |C64 (main program)|
 |db20     |VIC-20 (without memory expansion)|
 |db20+3k  |VIC-20 (with 3 KB memory expansion)|
-|db20+8k  |VIC-20 (with 8 KB, or more, memory expansion)|
+|db20+8k  |VIC-20 (with 8 KB memory expansion, or more)|
 |db128    |C128 (executable from both 40 and 80 columns)|
 |db264    |264 Series (C16, Plus/4, and other TED machines)|
 
@@ -201,10 +203,10 @@ can be disabled using the appropriate button.
    Dir Browser;
 
 2) by launching the self-executable program "tdb64", which must be located
-   in the same folder as Dir Browser, with the command: LOAD"TDB64",8,1
+   in the same folder as Dir Browser, with the command: LOAD"TDB64",8,1\
    This will automatically install "Fast Load" and launch Dir Browser.
 
-Note:
+Note:\
 The Fast Load routine included in the "tdb64" file is a modified (by me)
 version of Thomas Tempelmann's original program, which allows you to load
 programs even from devices with addresses other than 8, provided
